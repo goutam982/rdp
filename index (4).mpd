@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MPD id='dash' type="dynamic" xmlns="urn:mpeg:dash:schema:mpd:2011"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 DASH-MPD.xsd"
+  profiles="urn:mpeg:dash:profile:isoff-live:2011"
+  minBufferTime="PT21S"
+  suggestedPresentationDelay="PT21S"
+  availabilityStartTime="2024-11-24T05:19:33Z"
+  publishTime="2024-11-24T05:22:32Z"
+  minimumUpdatePeriod="PT6.9S"
+  maxSegmentDuration="PT11S"
+  timeShiftBufferDepth="PT39S">
+    <Period id='1732425573' start="PT0S" >
+        <AdaptationSet id="1" mimeType="video/mp4" contentType="video" maxWidth="1920" maxHeight="1080" par="1920:1080"  maxFrameRate="25" segmentAlignment="true" startWithSAP="1" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
+            <Representation id="tracks-v1" width="1920" height="1080" sar="1:1" frameRate="25" bandwidth="4745000" codecs="avc1.4d4028">
+              <SegmentTemplate initialization="tracks-v1/init.m4v" media="tracks-v1/seg-1732425573-$Number$.m4v?t=$Time$" timescale="1000"  startNumber="20014">
+                 <SegmentTimeline>
+                   <S t="140073" d="9999" r="1"/>
+                   <S d="9919"/>
+                   <S d="9999"/>
+                 </SegmentTimeline>
+              </SegmentTemplate>
+            </Representation>
+        </AdaptationSet>
+        <AdaptationSet id="2" mimeType="audio/mp4" contentType="audio" lang="TAM" segmentAlignment="true" startWithSAP="1">
+            <Representation id="tracks-a1" audioSamplingRate="48000" bandwidth="128000" codecs="mp4a.40.2">
+              <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+              <SegmentTemplate initialization="tracks-a1/init.m4v" media="tracks-a1/seg-1732425573-$Number$.m4v?t=$Time$" timescale="1000"  startNumber="20014">
+                 <SegmentTimeline>
+                   <S t="140073" d="9999" r="1"/>
+                   <S d="9919"/>
+                   <S d="9999"/>
+                 </SegmentTimeline>
+              </SegmentTemplate>
+            </Representation>
+        </AdaptationSet>
+    </Period>
+    <UTCTiming schemeIdUri="urn:mpeg:dash:utc:direct:2014" value="2024-11-24T05:22:32Z" />
+</MPD>
